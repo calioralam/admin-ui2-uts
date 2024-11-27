@@ -1,7 +1,16 @@
 import Card from "../components/Elements/Card";
 import MainLayout from "../components/Layouts/MainLayout";
+import bills from "../data/bills";
+import expensesBreakdowns from "../data/expense";
+import transactions from "../data/transaction";
+
 
 const DashboardPage = () => {
+  const billCard = bills.map((bill) => <div key={bill.id}>{bill.name}</div>);
+  const expenseCard = expensesBreakdowns.map((_expense) => <div key={expenseCard.id}>{expenseCard.name}</div>);
+
+  
+   
   return (
     <MainLayout type="dashboard">
       {/* top content start*/}
@@ -12,6 +21,7 @@ const DashboardPage = () => {
           desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolore sapiente suscipit nam, vel officia ipsam praesentium earum unde provident nisi corrupti sit? Officia minima maxime magni quaerat id exercitationem."
         />
         <Card title="Upcoming Bill" />
+    
         <Card
           variant="md:col-span-1 md:row-span-2"
           title="Recent Transaction"
